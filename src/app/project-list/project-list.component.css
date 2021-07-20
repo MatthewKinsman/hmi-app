@@ -1,0 +1,13 @@
+.list-row{
+    height: 50px;
+    background-color: #FFFEFF;
+}
+.list-odd{
+    background-color: #F0F3F6;
+}
+.list-selected{
+    background-color: blue;
+}
+.list-row div{
+    height: 100%;
+}

@@ -1,0 +1,7 @@
+<div #container class="container">
+    <div class="collapse" [@collapse]="{value: collapsed, params: {time: container.offsetHeight/1.5}}">
+        <div [style.height.px]="container.offsetHeight">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

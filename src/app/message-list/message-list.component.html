@@ -1,0 +1,38 @@
+<div class="container">
+   <div class="header-scroll" #header>
+      <div class="table-header">
+         <div class="table-cell" resizable #Column1='resizable'>
+            <span>
+               Column 1
+            </span>
+         </div>
+         <div class="table-cell" [style.width.px]="100" #ColumnIn>In</div>
+         <div class="table-cell" [style.width.px]="100" #ColumnOut>Out</div>
+         <div class="table-cell" [style.width.px]="200" #ColumnClass>Class</div>
+         <div class="table-cell" [style.width.px]="500" #ColumnDescription>Description</div>
+      </div>
+   </div>
+   <cdk-virtual-scroll-viewport #viewport class="table-body" itemSize="100">
+         <ng-container *cdkVirtualFor="let data of dataSource; let odd=odd;">
+            <div class="table-row" [style.height.px]="100">
+               <div class="table-cell" [ngStyle]="{'width':(Column1.width | async)+'px'}">
+                  <span>
+                     {{data?.index}}
+                  </span>
+               </div>
+               <div class="table-cell" [style.width.px]="ColumnIn.offsetWidth">
+                  {{data?.in | date:'shortTime'}}
+               </div>
+               <div class="table-cell" [style.width.px]="ColumnOut.offsetWidth">
+                  {{data?.out | date:'shortTime'}}
+               </div>
+               <div class="table-cell" [style.width.px]="ColumnClass.offsetWidth">
+                  {{data?.class}}
+               </div>
+               <div class="table-cell" [style.width.px]="ColumnDescription.offsetWidth">
+                  {{data?.value}}
+               </div>
+            </div>
+         </ng-container>
+   </cdk-virtual-scroll-viewport>
+</div>

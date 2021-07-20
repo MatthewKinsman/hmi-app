@@ -1,0 +1,9 @@
+.container{
+    height: 100%;
+    pointer-events: none;
+}
+.collapse{
+    height : 100%;
+    overflow:hidden;
+    pointer-events: all;
+}

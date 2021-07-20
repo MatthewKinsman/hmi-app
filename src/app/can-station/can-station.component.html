@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="panel">
+        <div class="header">Can Brake</div>
+        <div class="body">
+            <img src="assets/Can Infeed.png"/>
+            <p>State:{{(model | async)?.brakeState | async | actuatorState}}</p>
+            <p>Position:{{(model | async)?.brakePosition | async}}</p>
+            <button class="left" (click)="onBrakeRequest(1)">To Home</button>
+            <button class="right" (click)="onBrakeRequest(2)">To Work</button>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="header">Crowder</div>
+        <div class="body">
+            <div>
+                <p>State:{{(model | async)?.crowderState | async | actuatorState}}</p>
+                
+            </div>
+            <button class="left" (click)="onCrowderRequest(1)">To Home</button>
+            <button class="right" (click)="onCrowderRequest(2)">To Work</button>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="header">Inspection</div>
+        <div class="body">
+            <img width="640" height="480" [src]="inspectionImage | async"/>
+            <span>Status: {{(inspectionSummary | async)?.TotalStatus}}</span>
+        </div>
+    </div>
+</div>

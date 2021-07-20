@@ -1,0 +1,150 @@
+
+.navigation{
+    font-size: 2.75vh;
+    background-color: var(--secondary);
+}
+.navigation .button{
+    width: 100%;
+
+}
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container > *{
+    position : absolute;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+}
+.navigation .root{
+    overflow-y: auto;
+}
+.navigation .node{
+    margin-bottom: 10px;
+    width : 100%;  
+    background-color: var(--secondary-accent);
+}
+
+.navigation .node a{
+    text-decoration: none;
+    color: white;
+    stroke:white;
+    fill: white;
+    display: block;
+    width: 100%;
+    height: 9.5vh;
+    padding-left:10px;
+}
+
+.navigation .node .active{
+    pointer-events: none;
+    color: #18C0F1;
+    fill: #18C0F1;
+    stroke: #18C0F1;
+}
+
+.expand{
+    overflow:hidden;
+}
+.navigation .expand .node{
+    height: 7.5vh;
+    background-color: #636469;
+    margin-bottom: 2px;
+    padding-left: 25px;
+}
+.navigation .node .expand > :last-child{
+    margin-bottom: 10px;
+}
+
+#layout-grid {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 75% 25%;
+}
+#message-header{
+    display:grid;
+    font-size: 23px;
+    place-items: middle;
+    grid-template-columns: 1fr 4fr;
+    background: linear-gradient(180deg, #D8DDE1 0%, #C8CDD0 100%);
+    border-style: none none solid none;
+    border-color: #9BA0A3;
+    border-width: 1px;
+}
+
+.align-middle{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+}
+
+#main-window{
+    pointer-events: all;
+    background-color: var(--background);
+    overflow-y: auto;
+}
+
+#message-wrap{
+    position: relative;
+    writing-mode: vertical-lr;
+    color : var(--text-color);
+    fill: var(--text-color);
+    flex: 0;
+}
+
+#message-icon{
+    padding:4px;
+    position:absolute;
+    top:0;
+    bottom: 0;
+}
+
+#messages{
+    margin-left: 100%;
+    padding-left: 4px;
+    writing-mode: horizontal-tb;
+}
+
+.icon-wrap{
+    position: relative;
+    width:100%;
+    writing-mode: vertical-lr;
+}
+
+.icon-wrap .icon{
+    stroke-width: 0;
+    transition: .5s;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    padding: 4px;
+}
+.arrow{
+    transition: .25s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    fill: transparent;
+    stroke-width: 3px;
+    margin: 5px 100% 5px 5px;
+}
+.icon-wrap > :first-child{
+    position: relative;
+    margin-left: 100%;
+    writing-mode: horizontal-tb;
+    padding-left: 10px;
+}
+.turn{
+    transition: .25s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}

@@ -1,0 +1,13 @@
+{
+    "/projects":
+    {
+        "target":"http://192.168.1.1",
+        "secure": false,
+        "pathRewrite":{"^/projects" : "/projects"}
+    },
+    "/tray-cam":{
+        "target":"http://192.168.1.1",
+        "secure": false,
+        "pathRewrite":{"^/tray-cam":"/tray-cam"}
+    }
+}

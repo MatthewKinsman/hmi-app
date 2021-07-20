@@ -1,0 +1,6 @@
+<p>Name: {{project.name}}</p>
+
+<p>Number Of Layers: {{(data |async)?.layers}}</p>
+<p>Number Of Cases: {{(data | async)?.cases}}</p>
+<button (click)="onLoad()">Load</button>
+<p>{{loadStatus | async}}</p>

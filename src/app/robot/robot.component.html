@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="panel">
+        <div class="header">Can Gripper</div>
+        <p>{{(model | async)?.canGripper.bank[0].pressure | async}}</p>
+        <p>{{(model | async)?.canGripper.bank[1].pressure | async}}</p>
+        <div id="vacuum-graph">
+            <app-bar-graph [value]="100">
+            </app-bar-graph>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="header">
+            <span>Case Gripper</span>
+        </div>
+            <div class="block">
+                <p>Can Support</p>
+                <p>State : {{(model | async)?.trayGripper.canSupport | async}}</p>
+                <button class="left" (click)="onEnableSupport()">Enable</button>
+                <button class="right" (click)="onDisableSupport()">Disable</button>
+            </div>
+    </div>
+</div>

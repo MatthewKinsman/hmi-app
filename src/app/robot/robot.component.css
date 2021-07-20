@@ -1,0 +1,11 @@
+.container{
+    width:100%;
+}
+
+.block{
+    padding :10px;
+}
+
+#vacuum-graph{
+    height: 250px;
+}

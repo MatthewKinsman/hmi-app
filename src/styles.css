@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --background        : #D8DDE1;
+    --secondary         : #4B4B53;
+    --secondary-accent  : #595961;
+    --text-color        : #333439;
+    
+    --panel-background  : #EAEEEF;
+    --panel-header      : linear-gradient(180deg, #EBEFF0 0%, #DDE1E2 100%);
+}
+body{
+    user-select: none;
+    margin          : 0;
+    padding         : 0;
+    height          : 100vh;
+    font-family: Arial Narrow, Arial, sans-serif;
+}
+button.left{
+    border-radius: 3px 0px 0px 3px;
+    margin-right: -1px;
+}
+button.right{
+    border-radius: 0px 3px 3px 0px;
+}
+button.middle{
+    border-radius: 0px;
+    margin-right:-1px;
+}
+button{
+    font-family: inherit;
+    position: relative;
+    outline: none;
+    border: solid 1px #828285;
+    border-radius: 3px;
+    border-width: 1px;
+    height: 4.1vh;
+    width: 12.8vh;
+    font-size: 2vh;
+    background: linear-gradient(180deg, #F1F4F6 0%, #D6D9DC 100%);    
+}
+
+button:active{
+    border-color:#2AC3DB;
+    background: #36DAEF;
+}
+
+.panel{
+    background: var(--panel-background);
+    border-radius: 6px;
+    margin:25px 15px 0px 15px;
+    box-shadow: 0 0 30px #333
+}
+
+.panel .header{
+    background: var(--panel-header);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    height: 5vh;
+}
+
+.panel .body{
+    padding :10px;
+}

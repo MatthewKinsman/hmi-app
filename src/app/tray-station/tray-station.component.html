@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="panel">
+        <div class="header">
+            Crowder
+        </div>
+        <div class="body">
+            <div>
+                <button class="left" (click)="onCrowderRequest(1)" [disabled]="((model | async)?.manual.crowderEnable | async) || false ? false : true">To Home</button>
+                <button class="right" (click)="onCrowderRequest(2)" [disabled]="((model | async)?.manual.crowderEnable | async) || false ? false : true">To Work</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="header">
+            Stoppers
+        </div>
+        <div class="body">
+            <div>
+                <button class="left" (click)="onStopperRequest(1)" [disabled]="((model | async)?.manual.stopperEnable | async) || false ? false : true">To Home</button>
+                <button class="right" (click)="onStopperRequest(2)" [disabled]="((model | async)?.manual.stopperEnable | async) || false ? false : true">To Work</button>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="header">
+            Pusher
+        </div>
+        <div class="body">
+            <div>
+                <button class="left" >To Home</button>
+                <button class="right" >To Work</button>
+            </div>
+        </div>
+    </div>
+</div>

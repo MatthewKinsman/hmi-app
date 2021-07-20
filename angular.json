@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hmi-app"
+    }
+  },
+  "defaultProject": "hmi-app",
+  "cli": {
+    "analytics": "50a937e4-929c-4667-b48b-f240922c73ec"
+  }
 }

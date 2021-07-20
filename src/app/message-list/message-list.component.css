@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFEFF;
+}
+
+.header-scroll{
+    width:100%;
+    overflow: hidden;
+}
+.table-header{
+    /*flex: 0 0;*/
+    white-space: nowrap;
+}
+.table-body{
+    flex-grow: 1;
+}
+
+.table-cell{
+    position: relative;
+    display: inline-block;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.table-cell span{
+    display: flex;
+}
+.table-cell span::before, span::after{
+    content:' ';
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 20px;
+}
+
+.table-row{
+    background-color: #FFFEFF;
+    white-space:  nowrap;
+}
+
+::ng-deep .resize-holder{
+    position: absolute;
+    cursor: col-resize;
+    width: 20px;
+    height: 100%;
+    top: 0px;
+    right: -10px;
+}
+
+.table-row.odd{
+    background-color: white;
+}

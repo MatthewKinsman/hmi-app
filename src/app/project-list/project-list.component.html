@@ -1,0 +1,15 @@
+<div>
+    <ng-container *ngFor="let project of projects | async; let odd=odd">
+        <div class="list-row" (click)="onSelect(project)" [class.list-odd]="odd">
+            <div [class.list-selected]="project===selected">
+                <span>
+                    {{project.name}}
+                </span>
+                <span>
+                    {{project.modified}}
+                </span>
+            </div>
+        </div>
+    </ng-container>
+    <button (click)="onNext()" [disabled]="!selected">Load</button>
+</div>
