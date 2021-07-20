@@ -2,7 +2,18 @@
     <div class="panel">
         <div class="header">Can Brake</div>
         <div class="body">
-            <img src="assets/Can Infeed.png"/>
+            <div class="image-container">
+                <img src="assets/Can Infeed.png"/>
+                <div>Retracted</div>
+                <div id="can-brake-extend">
+                    <div class="limit-box"></div>
+                    <span>Lower Limit</span>
+                    <span></span>
+                    <span>Current Value</span>
+                    <div class="limit-box"></div>
+                    <span>Upper Limit</span>
+                </div>
+            </div>
             <p>State:{{(model | async)?.brakeState | async | actuatorState}}</p>
             <p>Position:{{(model | async)?.brakePosition | async}}</p>
             <button class="left" (click)="onBrakeRequest(1)">To Home</button>
@@ -13,6 +24,7 @@
         <div class="header">Crowder</div>
         <div class="body">
             <div>
+                <img src="assets/can-crowder.png"/>
                 <p>State:{{(model | async)?.crowderState | async | actuatorState}}</p>
                 
             </div>

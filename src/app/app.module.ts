@@ -25,6 +25,7 @@ import { RobotComponent } from './robot/robot.component';
 import { ProjectLoaderComponent } from './project-loader/project-loader.component';
 import { ProjectDisplayComponent } from './project-display/project-display.component';
 import { BarGraphComponent } from './bar-graph/bar-graph.component';
+import { CanBrakeComponent } from './can-station/can-brake/can-brake.component';
 
 @NgModule({
   declarations: [
